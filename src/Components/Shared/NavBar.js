@@ -2,45 +2,58 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
+import { Component, Fragment } from 'react';
 
 
 const Styles = styled.div`
   .navbar {
-    background-color: black;
+    background-color: white;
   }
-  a, .navbar-brand, .navbar-nav .nav-link {
-    color: #bbb;
+  .navbar-brand,a, .navbar-nav {
+    color: black;
+    font: bold 85% monospace;
+    font-size: 150%;
     &:hover {
-      color: white;
+      color: gray;
+    }
+  }
+  .nav-link {
+    color: black;
+    font-size: 10pt;
+    background-color: lightgreen;
+    border-radius: 15px;
+    &:hover {
+      color: gray;
     }
   }
 `;
 
 export const NavBar = () => (
-  <Styles>
-    <Navbar expand="lg">
-      <Navbar.Brand href="/"> RetroCar             <img src= {require("../../Assets/Logo.jpg")} w-100 height="100"/></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Item>
-            <Nav.Link>
-              <Link to="/Pages/Home">Home</Link>
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>
-              <Link to="/Pages/Details">Details</Link>
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-          
-            <Nav.Link>
-              <Link to="/Pages/Login">Login</Link>
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  </Styles >
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">Inicio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#inicio"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#mujer">Mujeres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#hombre">Hombres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#niño">Niñ@s</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contacto">Contacto</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
 )
+

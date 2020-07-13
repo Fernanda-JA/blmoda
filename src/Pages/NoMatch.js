@@ -1,4 +1,5 @@
 import React from 'react';
+//import HomePage  from '../Home/home.js';
 export const NoMatch = () => (
 
 <div>
@@ -10,6 +11,7 @@ export const NoMatch = () => (
         La página que buscas no existe :( !
         
     </p>
+    
 </div>
 );
 export default NoMatch;

@@ -1,5 +1,19 @@
 import React, {useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import styled from 'styled-components';
+import Image from 'react-bootstrap/Image';
+
+const Styles = styled.div`
+  .CarouselItem {
+    border-radius: 15px;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    width:100%;
+    background-color:lightpink;
+  }
+`;
 
  const ControlledCarousel = () => {
     const [index, setIndex] = useState(0);
@@ -11,46 +25,113 @@ import Carousel from 'react-bootstrap/Carousel';
     };
   
     return (
-      <Carousel activeIndex={index} direction={direction} onSelect={handleSelect}>
+    
+
+      <Styles>
+     
+      <Carousel activeIndex={index} direction={direction} onSelect={handleSelect} >
         <Carousel.Item>
-          <img
-            className="d-flex w-100"
-            src={require("../../Assets/4.jpg")}
+        <div class="imagen" >
+          
+         <center> <img
+            height={600}
+            width={650}
+            
+            class="center"
+            className="height-50 w-80"
+            src={require("../../Assets/2.jpg")}r
             alt="First slide"
-          />
+
+            />
+            </center> 
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p></p>
           </Carousel.Caption>
+          </div>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-flex w-100"
-            src={require ("../../Assets/1.jpg")}
-            alt="Second slide"
-          />
-  
+        <div class="imagen" >
+          
+         <center> <img
+            height={500}
+            width={700}
+            
+            class="center"
+            className="height-50 w-80"
+            src={require("../../Assets/1.jpg")}r
+            alt="First slide"
+
+            />
+            </center> 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3></h3>
+            <p></p>
           </Carousel.Caption>
+          </div>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-flex w-100"
+          <center><img
+          height={500}
+            width={800}
+            className="d-flex w-80"
             src={require("../../Assets/3.jpg")}
             alt="Third slide"
-          />
+          /></center>
   
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3></h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
           </Carousel.Caption>
+ 
+        </Carousel.Item>
+        <Carousel.Item>
+        <div class="imagen" >
+          
+         <center> <img
+            height={550}
+            width={700}
+            
+            class="center"
+            className="height-50 w-80"
+            src={require("../../Assets/4.jpg")}r
+            alt="First slide"
+
+            />
+            </center> 
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+        <div class="imagen" >
+          
+         <center> <img
+            height={500}
+            width={700}
+            
+            class="center"
+            className="height-50 w-80"
+            src={require("../../Assets/5.jpg")}r
+            alt="First slide"
+
+            />
+            </center> 
+          <Carousel.Caption>
+            <h3></h3>
+            <p></p>
+          </Carousel.Caption>
+          </div>
         </Carousel.Item>
       </Carousel>
+      </Styles>
+      
     );
+
+
+    
   }
   
 export default ControlledCarousel
